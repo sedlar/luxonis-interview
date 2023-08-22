@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SReality sell flats</title>
+  </head>
+  <body>
+    <h1>Offers to sell flats on SReality</h1>
+    {% for offer in offers %}
+        <h2>{{offer.title}}</h2>
+        <img src="{{offer.image_url}}" alt="{{offer.title}}" loading="lazy" />
+    {% else %}
+    <p><b>No offers were fetched yet, please try again later</b></p>
+    {% endfor %}
+  </body>
+</html>
